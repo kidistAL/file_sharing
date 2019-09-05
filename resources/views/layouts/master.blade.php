@@ -129,11 +129,9 @@ scratch. This page gets rid of all links and provides the needed markup only.
                         <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
                         <li class="nav-item">
-                            <a href="#" class="nav-link active">
-                                <span class="fa-stack">
-                                    <i class="fas fa-square fa-stack-2x"></i>
-                                    <i class="fas fa-file fa-stack-1x fa-inverse" style="color:black"></i>
-                                </span>
+                            <a href="files" class="nav-link">
+                            <i class="fa fa-file" aria-hidden="true"></i>
+
                                 <p>
                                     File Management
 
@@ -142,14 +140,23 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
                         </li>
 
+                        
                         <li class="nav-item">
-                            <a href="/students" class="nav-link active">
-                                <span class="fa-stack">
-                                    <i class="fas fa-square fa-stack-2x"></i>
-                                    <i class="fas fa-user fa-stack-1x fa-inverse"></i>
-                                </span>
+                        <a href="/courses" class="nav-link">
+                        <i class="fa fa-book" aria-hidden="true"></i>
+
+                            <p>
+                                Course Management
+
+                            </p>
+                        </a>
+
+                        <li class="nav-item">
+                            <a href="/departments" class="nav-link">
+                            <i class="fa fa-sitemap" aria-hidden="true"></i>
+
                                 <p>
-                                    Student Management
+                                    Department Management
 
                                 </p>
                             </a>
@@ -163,20 +170,20 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                 {{-- <i class=" fas fa-users fa-2x"></i> --}}
                                 <p>
                                     User Management
-                                    <i class="right fa fa-angle-left"></i>
+                                    <i class="right fa fa-angle-right"></i>
                                     {{-- <span class="right badge badge-danger">New</span> --}}
                                 </p>
                             </a>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
-                                    <a href="/students" class="nav-link active">
-                                        <i class="fa fa-circle-o nav-icon"></i>
+                                <a href="/students" class="nav-link">
+                                <i class="fa fa-user" aria-hidden="true"></i>
                                         <p>Student</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
                                     <a href="/instructors" class="nav-link">
-                                        <i class="fa fa-circle-o nav-icon"></i>
+                                    <i class="fa fa-user" aria-hidden="true"></i>
                                         <p>Instructors</p>
                                     </a>
                                 </li>
@@ -195,15 +202,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
             <div class="content-header">
                 <div class="container-fluid">
                     <div class="row mb-2">
-                        <div class="col-sm-6">
-                            <h1 class="m-0 text-dark">Student Management Page</h1>
-                        </div><!-- /.col -->
-                        <div class="col-sm-6">
-                            <ol class="breadcrumb float-sm-right">
-                                <li class="breadcrumb-item"><a href="#">Home</a></li>
-                                <li class="breadcrumb-item active">Student Page</li>
-                            </ol>
-                        </div><!-- /.col -->
+                        @yield('header')
                     </div><!-- /.row -->
                 </div><!-- /.container-fluid -->
             </div>

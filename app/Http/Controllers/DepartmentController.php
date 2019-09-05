@@ -104,7 +104,7 @@ class DepartmentController extends Controller
      */
     public function destroy(Department $department)
     {
-        $dept = Department::destroy($id);
-        return "deleted";
+        $department->delete();
+        return back();
     }
 }

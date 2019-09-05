@@ -100,8 +100,6 @@ class StudentController extends Controller
         $student->gender=$gender;
         $student->save();
 
-        return $student;
-
         return back();
 
 

@@ -48,7 +48,7 @@ class FileController extends Controller
         $sec = $request->input('section');
         $school = $request->input('school');
         $file_name = $request->input('file_name');
-        echo $year.$sec;
+        
         if ($request->file('file')->isValid()) {
             $name = $request->file('file')->store('files');
             $file->name = $file_name;
@@ -57,9 +57,9 @@ class FileController extends Controller
             $file->size = $request->file('file')->getSize();
             $file->save();
             Auth::user()->userable->files()->save($file);
-            return "successfull";
+            return back();
         }
-        return $year.$file_name;
+        return back();
     }
 
     /**
@@ -105,13 +105,13 @@ class FileController extends Controller
                 $file->name = $file_name;
                 $file->path = $name;
                 $file->save();
-                return "successfull";
+                return back();
             }
         }
         
         $file->name = $file_name;
         $file->save();
-        return $year.$file_name;
+        return back();
     }
 
     /**

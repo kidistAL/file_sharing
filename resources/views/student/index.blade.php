@@ -35,6 +35,18 @@
 
 </script>
 @append
+
+@section('header')
+<div class="col-sm-6">
+                            <h1 class="m-0 text-dark">Student Management Page</h1>
+                        </div><!-- /.col -->
+                        <div class="col-sm-6">
+                            <ol class="breadcrumb float-sm-right">
+                                <li class="breadcrumb-item"><a href="/">Home</a></li>
+                                <li class="breadcrumb-item active">Student Page</li>
+                            </ol>
+                        </div><!-- /.col -->
+@append
 @section('content')
 <div class="row">
     <div class="col-12">
@@ -69,6 +81,7 @@
                                 <td>
                                     <span class="table-remove"><button data-toggle="modal" data-target="#editstudent"
                                             type="button" data-name="{{$student->name}}"
+                                            data-id="{{$student->id}}"
                                             data-stud_id="{{$student->stud_id}}" data-gender="{{$student->gender}}"
                                             class="btn btn-success btn-rounded btn-sm my-0 edit">Edit </button></span>
                                 </td>
@@ -162,7 +175,7 @@
                 </button>
             </div>
             <div class="modal-body">
-                <form id="editForm" method="POST" enctype="multipart/form-data">
+                <form id="editform" method="POST" enctype="multipart/form-data">
                     @csrf
                     @method('PUT')
 
