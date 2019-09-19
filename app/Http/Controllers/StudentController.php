@@ -114,7 +114,7 @@ class StudentController extends Controller
     public function destroy($id)
     {
         $student = Student::destroy($id);
-        return "deleted";
+        return back();
 
 
     }

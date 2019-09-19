@@ -29,7 +29,7 @@ class Files extends Migration
 
         });
     }
-
+            
     /**
      * Reverse the migrations.
      *

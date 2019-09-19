@@ -27,6 +27,9 @@ Route::resource('courses', 'CourseController');
 
 Route::resource('departments', 'DepartmentController');
 
+Route::resource('instructors', 'InstructorController');
+
+
 
 
 Route::get('/test', function(){
